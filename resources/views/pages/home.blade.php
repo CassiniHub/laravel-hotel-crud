@@ -8,7 +8,12 @@
     <ul>
         @foreach ($employees as $employee)
             <li>
-                {{ $employee -> lastname }} {{ $employee -> firstname }}
+                <span>
+                    {{ $employee -> lastname }} {{ $employee -> firstname }}
+                </span>
+                <a href="{{ route('editEmployee', $employee -> id) }}">
+                    &#9998;
+                </a>
             </li>
         @endforeach
     </ul>
