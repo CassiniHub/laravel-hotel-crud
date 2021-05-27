@@ -2,6 +2,14 @@
 
 @section('content')
     <h1>
-        Hello World!
+        Emplyees
     </h1>
+
+    <ul>
+        @foreach ($employees as $employee)
+            <li>
+                {{ $employee -> lastname }} {{ $employee -> firstname }}
+            </li>
+        @endforeach
+    </ul>
 @endsection
