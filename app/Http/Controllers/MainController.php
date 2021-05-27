@@ -35,4 +35,12 @@ class MainController extends Controller
 
         return redirect() -> route('home');
     }
+
+    public function deleteEmployee($id) {
+        $employee = Employee::findOrFail($id);
+
+        $employee -> delete();
+
+        return redirect() -> route('home');
+    }
 }
